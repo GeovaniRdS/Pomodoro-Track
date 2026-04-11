@@ -1,16 +1,41 @@
-# React + Vite
+# 🍅 Pomodoro Timer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um temporizador Pomodoro simples construído com React e Vite.
 
-Currently, two official plugins are available:
+## Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Este projeto foi desenvolvido como exercício de aprendizado de React, explorando conceitos fundamentais como `useState`, `useEffect`, `setInterval` e manipulação de estado.
 
-## React Compiler
+## Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ⏱️ Temporizador regressivo de 25 minutos
+- ▶️ Botão de iniciar e pausar
+- 🔄 Tempo exibido no formato `MM:SS`
+- ⏹️ Reset automático ao chegar a zero
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+
+## Como rodar o projeto
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar em modo de desenvolvimento
+npm run dev
+```
+
+## Conceitos aprendidos
+
+- **useState** — armazenar e atualizar o tempo restante e o estado de execução do timer
+- **useEffect** — sincronizar o `setInterval` com o estado `isRunning`
+- **setInterval / clearInterval** — criar e cancelar o intervalo do timer
+- **Cleanup function** — evitar vazamentos de memória ao pausar o timer
+- **Operador ternário** — alternar o texto do botão entre "Iniciar" e "Pausar"
+- **Math.floor e módulo (%)** — converter segundos em formato `MM:SS`
+- **padStart** — garantir dois dígitos na exibição do tempo
+
+
