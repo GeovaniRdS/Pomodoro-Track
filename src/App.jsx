@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const despertador = new Audio("/AlarmClock.wav");
+const despertador = new Audio("/Pomodoro-Track/AlarmClock.wav");
+
 
 function App() {
 
@@ -65,9 +66,22 @@ function App() {
     setConfigAberta(false);
   }
 
+  function notificar(mensagem) {
+    if (Notification.permission === "granted") {
+      new Notification("🍅 Pomodoro", {
+        body: mensagem,
+        icon: "/favicon.ico"
+      })
+    }
+  }
+
+
+
+
   function avancarCiclo() {
     despertador.play();
     if (modo === "foco") {
+      notificar("Foco concluido!")
       const novosFocosConcluidos = focosConcluidos + 1;
       if (novosFocosConcluidos === totalFocos) {
         setModo("pausa-longa");
@@ -81,19 +95,28 @@ function App() {
       return;
     }
     if (modo === "pausa-curta" || modo === "pausa-longa") {
+      notificar("Descanso Acabou")
       setModo("foco");
       setTimeLeft(tempoFoco);
     }
   }
 
   useEffect(() => {
+    Notification.requestPermission()
+  }, []);
+
+  useEffect(() => {
     if (!isRunning) return;
+    let encerrado = false;
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
           setIsRunning(false);
-          avancarCiclo();
+          if (!encerrado) {
+            encerrado = true;
+            avancarCiclo();
+          }
           return 0;
         }
         return prev - 1;
