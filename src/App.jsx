@@ -142,7 +142,7 @@ function App() {
         </button>
         <button className="bubble-small" onClick={abrirConfiguracoes}>
           <span>⚙️</span>
-          <small>Config</small>
+          <small>Configuração</small>
         </button>
       </div>
 

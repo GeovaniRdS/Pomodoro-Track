@@ -129,8 +129,8 @@ h1 {
 }
 
 .bubble-small {
-  width: 84px;
-  height: 84px;
+  width: 114px;
+  height: 114px;
   border-radius: 50%;
   background: var(--bg2);
   border: 2px solid rgba(255,255,255,0.08);
