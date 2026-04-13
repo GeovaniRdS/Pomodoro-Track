@@ -129,8 +129,8 @@ h1 {
 }
 
 .bubble-small {
-  width: 114px;
-  height: 114px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: var(--bg2);
   border: 2px solid rgba(255,255,255,0.08);
@@ -142,6 +142,13 @@ h1 {
   cursor: pointer;
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   font-family: 'Nunito', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .bubble-small {
+    width: 114px;
+    height: 114px;
+  }
 }
 
 .bubble-small:hover {
