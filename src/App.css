@@ -144,10 +144,16 @@ h1 {
   font-family: 'Nunito', sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .bubble-small {
-    width: 114px;
-    height: 114px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .bubble-small small {
+    font-size: 0.45rem;
+    text-align: center;
+    line-height: 1.2;
   }
 }
 

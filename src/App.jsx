@@ -142,7 +142,7 @@ function App() {
         </button>
         <button className="bubble-small" onClick={abrirConfiguracoes}>
           <span>⚙️</span>
-          <small>Configuração</small>
+          <small>Ajustes</small>
         </button>
       </div>
 
@@ -150,7 +150,7 @@ function App() {
       {configAberta && (
         <div className="config-overlay" onClick={() => setConfigAberta(false)}>
           <div className="config-panel" onClick={(e) => e.stopPropagation()}>
-            <h2>Configurações</h2>
+            <h2>Ajustes</h2>
 
             <div className="config-field">
               <label>Foco (minutos)</label>
