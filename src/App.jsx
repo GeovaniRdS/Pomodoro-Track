@@ -137,8 +137,8 @@ function App() {
       {/* Bolhinhas de ações */}
       <div className="bubbles-row">
         <button className="bubble-small" onClick={resetarTimer}>
-          <span>↺</span>
-          <small>Reset</small>
+          <span className="icone-reset">↺</span>
+          <small>Reiniciar</small>
         </button>
         <button className="bubble-small" onClick={abrirConfiguracoes}>
           <span>⚙️</span>

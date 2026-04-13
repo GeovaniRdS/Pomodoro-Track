@@ -129,8 +129,8 @@ h1 {
 }
 
 .bubble-small {
-  width: 64px;
-  height: 64px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   background: var(--bg2);
   border: 2px solid rgba(255,255,255,0.08);
@@ -152,6 +152,7 @@ h1 {
 
 .bubble-small:active {
   transform: scale(0.96);
+  color: var(--current-color);
 }
 
 .bubble-small span {
@@ -210,6 +211,14 @@ h1 {
 .foco-dot.ativo {
   background: var(--current-color);
   box-shadow: 0 0 8px var(--current-color);
+}
+
+.icone-reset {
+  font-size: 1.3rem;
+  background: linear-gradient(135deg, #c0c0c0, #808080, #e8e8e8, #909090);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Painel de configurações */
