@@ -4,17 +4,17 @@ Um temporizador Pomodoro construído com React e Vite, baseado nos requisitos do
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido como exercício de aprendizado de React, explorando conceitos fundamentais como `useState`, `useEffect`, `setInterval` e manipulação de estado.
+Este projeto foi desenvolvido como exercício de aprendizado de React, explorando conceitos fundamentais como `useState`, `useEffect`, `setInterval` e manipulação de estado. O design foi pensado para ser visualmente agradável e responsivo, com tema roxo e bolhas animadas.
 
 ## Funcionalidades
 
-- [x] Iniciar, pausar e retomar o timer
-- [x] Alternância automática entre sessão de foco, pausa curta e pausa longa
-- [x] Exibição do modo atual (Foco, Pausa Curta, Pausa Longa)
-- [x] Contador de sessões de foco concluídas
-- [ ] Configuração dos intervalos padrão pelo usuário
-- [ ] Notificação sonora ao fim de cada sessão
-- [ ] Interface responsiva para desktop e mobile
+- ✅ Iniciar, pausar e retomar o timer
+- ✅ Alternância automática entre sessão de foco, pausa curta e pausa longa
+- ✅ Configuração dos intervalos padrão pelo usuário
+- ✅ Exibição do modo atual (Foco, Pausa Curta, Pausa Longa)
+- ✅ Contador de sessões de foco concluídas
+- ✅ Notificação sonora ao fim de cada sessão
+- ✅ Interface responsiva para desktop e mobile
 
 ## Intervalos padrão
 
@@ -24,10 +24,13 @@ Este projeto foi desenvolvido como exercício de aprendizado de React, explorand
 | Pausa curta | 5 minutos |
 | Pausa longa (a cada 4 focos) | 15 minutos |
 
+> Os intervalos podem ser configurados pelo usuário diretamente na aplicação.
+
 ## Tecnologias
 
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
+- Google Fonts (Bebas Neue, Space Mono, Nunito)
 
 ## Como rodar o projeto
 
@@ -37,6 +40,9 @@ npm install
 
 # Rodar em modo de desenvolvimento
 npm run dev
+
+# Gerar build de produção
+npm run build
 ```
 
 ## Conceitos aprendidos
@@ -49,4 +55,17 @@ npm run dev
 - **Math.floor e módulo (%)** — converter segundos em formato `MM:SS`
 - **padStart** — garantir dois dígitos na exibição do tempo
 - **Closures e prev** — atualizar state de forma segura dentro do `setInterval`
+- **Spread operator** — atualizar campos de um objeto no state sem perder os demais
 - **Constantes descritivas** — facilitar manutenção dos valores de tempo
+- **CSS Variables** — tema dinâmico que muda de cor conforme o modo ativo
+
+## Estrutura do projeto
+
+```
+src/
+├── App.jsx       # Componente principal com a lógica do timer
+├── App.css       # Estilos e tema visual
+└── main.jsx      # Ponto de entrada da aplicação
+public/
+└── AlarmClock.wav  # Som de notificação ao fim de cada sessão
+```
